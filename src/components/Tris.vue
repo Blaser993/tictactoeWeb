@@ -5,6 +5,7 @@
 
 		<h3>Player's turn</h3>
 
+        
 		<div class="board">
             <div 
 				v-for="(row, x) in board" 
@@ -14,7 +15,8 @@
 					v-for="(cell, y) in row" 
 					:key="y" 
 					@click="MakeMove(x, y)"
-                    class="slot">
+                    class="slot"
+                    :class="{ 'croce': cell === 'X', 'cerchio': cell === 'O' }">
 					{{ cell === 'X' ? 'x' : cell === 'O' ? 'o' : '' }}
 				</div>
 			</div>
@@ -50,9 +52,10 @@ const CalculateWinner = (board) => {
   return null
 }
 
-
+// decide il vincitore
 const winner = computed(() => CalculateWinner(board.value.flat()))
 
+// decide chi fa la mossa
 const MakeMove = (x, y) => {
 	if (winner.value) return
 
@@ -63,6 +66,7 @@ const MakeMove = (x, y) => {
 	player.value = player.value === 'X' ? 'O' : 'X'
 }
 
+//nuova partita
 const ResetGame = () => {
 	board.value = [
 		['', '', ''],
@@ -70,7 +74,6 @@ const ResetGame = () => {
 		['', '', '']
 	]
 	player.value = 'X'
-
 }
 
 export default {
@@ -87,23 +90,40 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang="scss">
+@import '../assets/css/style.scss';
+
 .board{
   border: 1px solid;
-  border-color: dark;
+  border-color: $myDark;
   max-width: 600px;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 64px;
 
   .slot{
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 64px;
+    aspect-ratio: 1;
     flex-grow: 1;
     padding: 10px;
     border: 1px solid; 
-    border-color: dark;
+    border-color: $myDark;
+    background-size: cover;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 64px;
+    color: transparent;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
  }
+ .croce{     
+    background-image:url('../assets/img/x.png');
+
+    }
+.cerchio{
+    background-image:url('../assets/img/o.png');
+}
 }
 
 </style>
