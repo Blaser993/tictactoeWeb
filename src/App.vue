@@ -5,6 +5,7 @@ import Tris from './components/Tris.vue';
 <template>
 
 <div class="container">
+  <h1>Tic Tac Toe</h1>
   <Tris/>
 </div>
   

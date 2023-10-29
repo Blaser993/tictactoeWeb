@@ -1,9 +1,6 @@
 <template>
 	<main>
-        
-		<h1>Tic Tac Toe</h1>
-
-		<h3>Player's turn</h3>
+		<h3>{{ player }}'s turn</h3>
 
         
 		<div class="board">
@@ -24,7 +21,7 @@
 
 		<div>
 			<h2 v-if="winner">Player '{{ winner }}' wins!</h2>
-			<button @click="ResetGame" >Reset</button>
+			<button @click="ResetGame">Nuova partita</button>
 		</div>
 	</main>
 </template>
