@@ -46,12 +46,16 @@ const CalculateWinner = (board) => {
       return board[a]
     }
   }
+  console.log("winner:" + winner.value + ";" , board)
   return null
 }
 
 // decide il vincitore
-const winner = computed(() => CalculateWinner(board.value.flat()))
-
+const winner = computed(() => {
+  const result = CalculateWinner(board.value.flat());
+  console.log(result);
+  return result;
+});
 // decide chi fa la mossa
 const MakeMove = (x, y) => {
 	if (winner.value) return
