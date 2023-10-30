@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>History</h1>
+      <h1>Storico delle partite</h1>
       <!-- Contenuto della vista History -->
     </div>
   </template>
