@@ -1,14 +1,13 @@
 <script setup>
-import Tris from './components/Tris.vue';
+import { ref } from 'vue';
+import Navigator from './components/partials/Navigator.vue'
 </script>
 
 <template>
-
-<div class="container">
-  <h1>Tic Tac Toe</h1>
-  <Tris/>
-</div>
   
+  
+    <Navigator/>
+
 </template>
 
 <style lang="scss">
