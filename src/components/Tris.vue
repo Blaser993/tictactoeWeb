@@ -1,7 +1,7 @@
 <template>
 	<main>
-		<h3>{{ player }}'s turn</h3>
-
+    
+		<h3>È il turno del giocatore "{{ player }}"</h3>
         
 		<div class="board">
             <div 
