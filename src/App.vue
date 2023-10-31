@@ -42,7 +42,6 @@ nav{
     }
   }
 
-
   li{
     flex-grow: 2;
     cursor: pointer;

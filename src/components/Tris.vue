@@ -97,22 +97,19 @@ export default {
 .board{
   border: 1px solid;
   border-color: $myDark;
-  max-width: 600px;
+  max-width: 360px;
   margin: 0 auto;
   margin-bottom: 64px;
 
   .slot{
     display: inline-block;
-    width: 64px;
+    width: 40%;
     aspect-ratio: 1;
     flex-grow: 1;
     padding: 10px;
     border: 1px solid; 
     border-color: $myDark;
     background-size: cover;
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 64px;
     color: transparent;
     background-size: 80% 80%;
     background-repeat: no-repeat;
