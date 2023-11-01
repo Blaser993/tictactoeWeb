@@ -9,16 +9,13 @@ const reloadPage = () => {
 <template>
   <nav class="container-full">
     <ul class="row">
-      <li><a href="#" @click="reloadPage"><span>TIC TAC TOE </span></a></li>
-      
+      <li><a href="#" @click="reloadPage"><span>TIC TAC TOE </span></a></li>     
     </ul>
   </nav>
   
  <div class="container">
   <Tris/>
  </div>
-  
-
 </template>
 
 <style lang="scss">

@@ -157,8 +157,7 @@ export default {
     color: $white;
 }
 
-.winning{
-  
+.winning{ 
   background-color: black;
 }
 
