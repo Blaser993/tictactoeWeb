@@ -10,7 +10,7 @@ const reloadPage = () => {
   <nav class="container-full">
     <ul class="row">
       <li><a href="#" @click="reloadPage"><span>TIC TAC TOE </span></a></li>
-      <li>storico</li>
+      
     </ul>
   </nav>
   
@@ -30,7 +30,13 @@ nav{
   left: 0;
   width: 100%;
   line-height: $navHeight;
-  background-color: green;
+  border-bottom: 2px solid;
+  background-color: $white;
+  box-shadow: 0px 1px 2px;
+
+  span{
+    font-size: 24px;
+  }
 
   ul :first-child{
     flex-grow: 5;
